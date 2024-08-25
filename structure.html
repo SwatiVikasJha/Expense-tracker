@@ -3,45 +3,116 @@
 <head>
     <title>Expense Tracker</title>
 <style>
-body {padding-top: 30px;}
+body {padding-top: 30px;
+  background-image: url('bgimg.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 form {display: flex;
     flex-direction: column;}
+
 input {padding: 5px;
        width: 400px;}
+
 select {padding: 5px;
        width: 400px;}
+
 button {padding: 10px;
     background-color: #28a745;
     color: white;
     font-weight: bold;
     border: none;
        width: 400px;}
-li {background: #f8f9fa;
-    display: flex;}
+li {background: #f8f9fa;}
 </style>
 </head>
 <body>
+<center>
+<div class="input">
 
     <h1>Expense Tracker</h1>
-    <form id="expense-form"  action="/action_page.php">
+<table><tr><td>
+    <form>
         <label for="amount">Amount:</label>
-        <input type="number" id="amount"><br>
-        
+</td></tr><tr><td>
+        <input type="number" id="amount" placeholder="Enter amount"><br><br>
+</td></tr><tr><td>
         <label for="category">Category:</label>
+</td></tr><tr><td>
         <select name"category" id="category">
-           <option value="utilities">Utilities</option>
-           <option value="miscellaneous">Miscellaneous</option>
-        </select><br>
-
+           <option value=""></option>
+           <option value="Utilities">Utilities</option>
+           <option value="Food">Food</option>
+           <option value="Education">Education</option>
+           <option value="Miscellaneous">Miscellaneous</option>
+           <option value="Others">Others</option>
+        </select><br><br>
+</td></tr><tr><td>
         <label for="date">Date:</label>
-        <input type="date" id="date"><br>
+</td></tr><tr><td>
+        <input type="date" id="date"><br><br>
+</td></tr><tr><td>
         
-        <button type="submit">Add Expense</button>
+        <input type="button" id="btn" value="Add Expense" style="padding: 10px;
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    border: none;
+       width: 400px;">
     </form>
+</td></tr></table>
+<br><br><br>
+</div>
+<div class="output">
 
-    <h2>Expenses</h2>
-    <ul id="expense-list">
-<li>hhhhhhh</li></ul>
+<h1>Expenses:</h1>
+
+<table style="width:60%; border:2px solid black;">
+<tr>
+<td style="border:2px solid #132f7f; border-collapse: collapse; border-radius: 5px; font-weight: bold; height: 40px; width: 30%; text-align: center; font-size: 30px;">Amount
+</td>
+<td style="border:2px solid #132f7f; border-collapse: collapse; border-radius: 5px; font-weight: bold; height: 40px; width: 40%; text-align: center; font-size: 30px;">Category
+</td>
+<td style="border:2px solid #132f7f; border-collapse: collapse; border-radius: 5px; font-weight: bold; height: 40px; width: 30%; text-align: center; font-size: 30px;">Date
+</td>
+</tr>
+<tr>
+<td style="border:2px solid #273e80; border-collapse: collapse; border-radius: 5px; height: 40px; width: 30%; text-align: center; font-size: 20px;">
+<p class="output" id="out1"></p>
+</td>
+<td style="border:2px solid #273e80; border-collapse: collapse; border-radius: 5px; height: 40px; width: 30%; text-align: center; font-size: 20px;">
+<p class="output" id="out2"></p>
+</td>
+<td style="border:2px solid #273e80; border-collapse: collapse; border-radius: 5px; height: 40px; width: 30%; text-align: center; font-size: 20px;">
+<p class="output" id="out3"></p>
+</td>
+</tr>
+</table>
+
+</div>
+</center>
+
+<script>
+
+const amt = document.getElementById('amount');
+const cat = document.getElementById('category');
+const dat = document.getElementById('date');
+const btn = document.getElementById('btn');
+const out1 = document.getElementById('out1');
+const out2 = document.getElementById('out2');
+const out3 = document.getElementById('out3');
+
+function fun(){
+   out1.innerHTML = amt.value;
+   out2.innerHTML = cat.value;
+   out3.innerHTML = date.value;
+}
+
+btn.addEventListener('click',fun);
+
+</script>
 
 </body>
 </html>
