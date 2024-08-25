@@ -2,32 +2,9 @@
 <html lang="en">
 <head>
     <title>Expense Tracker</title>
-<style>
-body {padding-top: 30px;
-  background-image: url('bgimg.png');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-form {display: flex;
-    flex-direction: column;}
-
-input {padding: 5px;
-       width: 400px;}
-
-select {padding: 5px;
-       width: 400px;}
-
-button {padding: 10px;
-    background-color: #28a745;
-    color: white;
-    font-weight: bold;
-    border: none;
-       width: 400px;}
-li {background: #f8f9fa;}
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 <center>
 <div class="input">
@@ -69,7 +46,7 @@ li {background: #f8f9fa;}
 
 <h1>Expenses:</h1>
 
-<table>
+<table style="width:60%;">
 <tr>
 <td style="border:2px solid #132f7f; border-collapse: collapse; border-radius: 5px; font-weight: bold; height: 40px; width: 30%; text-align: center; font-size: 30px;">Amount
 </td>
@@ -94,25 +71,7 @@ li {background: #f8f9fa;}
 </div>
 </center>
 
-<script>
-
-const amt = document.getElementById('amount');
-const cat = document.getElementById('category');
-const dat = document.getElementById('date');
-const btn = document.getElementById('btn');
-const out1 = document.getElementById('out1');
-const out2 = document.getElementById('out2');
-const out3 = document.getElementById('out3');
-
-function fun(){
-   out1.innerHTML = amt.value;
-   out2.innerHTML = cat.value;
-   out3.innerHTML = date.value;
-}
-
-btn.addEventListener('click',fun);
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
