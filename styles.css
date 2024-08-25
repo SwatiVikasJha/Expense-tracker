@@ -1,0 +1,23 @@
+body {padding-top: 30px;
+  background-image: url('bgimg.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+form {display: flex;
+    flex-direction: column;}
+
+input {padding: 5px;
+       width: 400px;}
+
+select {padding: 5px;
+       width: 400px;}
+
+button {padding: 10px;
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    border: none;
+       width: 400px;}
+li {background: #f8f9fa;}
